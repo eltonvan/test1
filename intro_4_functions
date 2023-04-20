@@ -1,0 +1,23 @@
+#define  a function
+
+def calulate_stuff(num1, num2):
+    
+    return num1**num2
+
+
+
+import random
+money = 100
+
+def double_or_nothing(bet):
+    money = 100
+    lucky = random.randint(0,1)
+    if lucky ==1:
+        money = money + bet*2
+    else:
+        money = money - bet
+
+    return money
+
+print("your balance is ",  double_or_nothing(99))
+
