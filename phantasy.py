@@ -1,3 +1,4 @@
+from curses.ascii import isdigit
 import random
 
 luck = random.randint(1,3)
@@ -7,7 +8,12 @@ health = random.randint(3,15)
 initiative = random.randint(3,15)
 msg= ""
 print("Welcome to phantasy")
-players = int(input("How many players?"))
+players = input("How many players?")
+
+while (players.isdigit() == False):
+    players = input("please enter a NUMBER of players?")
+
+players = int(players)
 
 player_names=[]
 i = 0
